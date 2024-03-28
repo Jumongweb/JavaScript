@@ -24,4 +24,6 @@ function task4(){
 console.log(`Number 4: ${task4()}`);
 
 let a1 = 20
-console.log(typeof(null))
+console.log(typeof null)
+let date = new Date();
+console.log(date.getDay)
