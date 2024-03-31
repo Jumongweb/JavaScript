@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <script>
+        let counter = 0;
+        function count(){
+            counter++;
+            document.querySelector('h1').innerHTML = counter;
+        }
+        function greet(){
+            if (document.querySelector('h2').innerHTML === "Hello"){
+                document.querySelector('h2').innerHTML = "Goodbye";
+            }
+            else{
+                document.querySelector('h2').innerHTML = "Hello";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Hello</h1>
+    <h2>Greet</h2>
+    <button onclick="count()">Count</button>
+    <button onclick="greet()">Greet</button>
+    
+</body>
+</html>
