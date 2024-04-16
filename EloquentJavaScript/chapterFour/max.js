@@ -10,3 +10,6 @@ const max = (...numbers)=> {
 
 console.log(max(2,90,8,23,3));
 console.log("hi", "world");
+
+let numbers = [5,1,7];
+console.log(max(...numbers));
