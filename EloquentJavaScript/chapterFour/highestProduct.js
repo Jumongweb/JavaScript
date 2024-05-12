@@ -1,7 +1,7 @@
 const getHighestProduct = (arrays)=> {
     let highestProduct = -Infinity;
     if (arrays.length === 0 || arrays.length === 1){
-        return arrays[0];
+        return 0;
     }
     
     for(let i = 0; i < arrays.length; i++){

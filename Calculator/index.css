@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    row-gap: 15px;
+    column-gap: 15px;
+    
+}
+
+.bottom-key{
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px;
+    width: 100%;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 15px;
+
+}
+
+input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 16px;
+    background: transparent;
+    background-color: hsl(0, 0%, 10%);
+    border: none;
+    color: white;
+    text-align: right;
+    font-size: 24px;
+}
+
+.container{
+    background-color: black;
+    flex-direction: column;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    width: 400px;
+}
+
+.first-div-btn > button, .bottom-key button{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    padding: 16px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.first-div-btn > button:hover{
+    background-color: hsl(0, 0%, 20%);
+}
+
+.first-div-btn > button:active{
+    background-color: hsl(0, 0%, 10%);
+}
+
+.first-div-btn .orange{
+    background-color: orange;
+}
+.first-div-btn .yellow:hover{
+    background-color: hsl(39, 100%, 40%);
+}
+
+.first-div-btn .yellow:active{
+    background-color: hsl(39, 100%, 30%);
+}
+.bottom-key{
+    /* background-color: blue; */
+    align-items: center;
+    display: flex;
+}
+
+.bottom-key .zero{
+    /* width: 90px; */
+    grid-column: span 2;
+    width: 145px;
+    border-radius: 56px;
+    margin-top: 16px;
+    /* background-color: blue; */
+}
