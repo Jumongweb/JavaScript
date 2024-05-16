@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+button{
+    cursor: pointer;
+}
+.mainContainer{
+    width: 70%;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 24px;
+    color: white;
+}
+
+.taskContainer{
+
+}
+
+h1{
+    text-align: center;
+}
+
+.task{
+    margin: 16px;
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    font-size: 24px;
+}
+
+.delete{
+    background-color: gray;
+    
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.task-text input{
+    margin-right: 8px;    
+}
+
+.searchDiv{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 24px;
+    padding: 8px;
+}
+
+.searchDiv input{
+    font-size: 16px;
+    padding: 8px;
+    width: 45%;
+}
+
+.searchDiv button{
+    background-color: green;
+    border-radius: 8px;
+    padding: 8px;
+    color: white;
+    border: none;
+}
+
+.addTaskBtn{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(img/unchecked.png);
+    background-position: center;
+    top: 12px;
+    left: 8px;
+    background-size: cover;
+}
+
+.addTaskInput{
+    padding: 8px;
+}
+
+.addTaskDiv{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.addTaskDiv input{
+    width: 40%;
+}
+
+.addTaskDiv input::placeholder{
+    font-size: 16px;
+}
