@@ -1,18 +1,40 @@
-const html = `
-<div class="task">
-<p class="task-text">
-    <input type="checkbox">
-    ${addTaskInput.value}    
-</p>
-<button class="delete">
-    Delete
-</button>
-</div>
-`;
+const inputBox = document.getElementById("input-box");
+const listContainer = document.getElementById("listContainer");
 
-const taskContainer = document.querySelector('.taskContainer');
-const addTaskInput = document.querySelector(".addTaskInput");
+let span;
+let li;
 
-const addTaskBtn = document.querySelector(".addTaskBtn").onclick;
+function addTask(){
+    if (inputBox.value === ""){
+        alert('This field cannot be empty')
+    } else{
+        li = document.createElement('li');
+        li.innerHTML = inputBox.value;
+        listContainer.appendChild(li);
+        span = document.createElement('span');;
+        span.innerHTML = "delete";
+        li.appendChild(span);
+    }
+    inputBox.value = '';
+    saveData();
+}
 
+listContainer.addEventListener('click', function(e){
+    if (e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+        saveData();
+    } else{
+        e.target.classList.toggle('checked');
+        saveData();
+    }
+})
 
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML);
+}
+
+function displayTask(){
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+
+displayTask();
